@@ -1,0 +1,62 @@
+.footer {
+    padding: 16px;
+    border-top: 1px solid $section-border-color;
+    font-size: $font-size-min;
+    line-height: 16px;
+    color: $text-color-secondary;
+    text-align: center;
+    background-color: $bg-color;
+
+    
+    @media (min-width: $screen-md) {
+        display: flex;
+        justify-content: space-between;
+        align-items: top;
+        padding: 32px 24px 16px;
+    }
+    @media (min-width: $screen-xl) {     
+        padding: 32px 32px 24px;
+    }
+
+    &__item {
+        opacity: .7;
+        transition: all .4s ease-out;
+        margin: 0;
+        margin-bottom: 16px;
+
+        @media (min-width: $screen-md) {
+            max-width: 32%;
+            margin-bottom: 0;
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+        &:first-child {
+            @media (min-width: $screen-md) {
+                text-align: left;
+            }
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+            @media (min-width: $screen-md) {
+                text-align: right;
+            }
+        }
+    }
+
+    &__link {
+        &,
+        &:focus {
+            text-decoration: none;
+            color: $text-color-secondary;
+            transition: all .4s ease-out;
+        }
+        &:focus,
+        &:hover {
+            text-decoration: underline;
+            color: $gray;
+        }
+    }
+}

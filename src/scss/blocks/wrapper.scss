@@ -1,0 +1,12 @@
+.wrapper {
+    font-family: "TT Lakes", sans-serif;
+    max-width: 1120px;
+    margin: 0 auto ;
+    position: relative;
+    box-sizing: border-box;
+    
+    @media (min-width: $screen-xl) {
+            max-width: $screen-xl;
+            padding-left: 320px;   
+    }
+}

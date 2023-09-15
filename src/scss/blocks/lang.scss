@@ -1,0 +1,18 @@
+.lang {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+
+    &__link {
+        &,
+        &:active {
+            font-size: $font-size-med;
+            font-weight: 500;
+            line-height: 24px;
+            text-decoration: none;
+            color: $text-color-primary;
+            margin-right: 4px;
+        }
+    }
+}

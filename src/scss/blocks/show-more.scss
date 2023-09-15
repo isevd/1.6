@@ -1,0 +1,38 @@
+.show-more {
+
+    &,
+    &:active {
+        background: transparent;
+        border: none;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    &::before {
+        content: "";
+        background: url("/src/img/icons/more.svg") no-repeat;
+        width: 8px;
+        height: 11px;
+        margin: 8px;
+        background-color: transparent;
+    }
+    &__text {
+        font-size: $font-size-med;
+        line-height: 24px;
+        font-family: 'TT Lakes';
+        font-weight: 500;
+        color: $text-color-primary;
+        letter-spacing: -0.2px;
+        padding: 0 8px;
+        transition: color .3s linear;
+        &:hover {
+            color: $gray;
+        }
+    }
+
+    &--open {
+        &::before {
+            transform: rotate(180deg);
+        }
+    }
+}

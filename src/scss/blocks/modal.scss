@@ -1,0 +1,90 @@
+.modal {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.96);
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  
+  top: 0;
+  left: 0;
+  z-index: 75;
+  transform: translateX(-100%);
+  transition:
+    visibility 0s .3s,
+    opacity .3s,
+    transform 0s .3s;
+      
+
+  &[data-modal-name="menu"] {
+    z-index: 50;
+    @media (min-width: $screen-xl) {
+      position: fixed;
+      transform: none;
+      opacity: 1;
+      width: auto;
+      height: auto;
+      
+    }
+  }
+
+  &--show {
+     
+      right: 0;
+      
+      transform: translateX(100%);
+          
+  }
+
+  &--visible {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    
+    z-index: 100;
+    transition:
+    opacity .5s,
+    transform 0s 0s;
+      
+    &[data-modal-name="menu"] {
+      @media (min-width: $screen-xl) {
+        position: fixed;
+        transform: none;
+        opacity: 1;
+        width: auto;
+        height: auto;
+        
+      }
+    }
+  }
+
+  &__content {
+    position: fixed;
+    transition: transform .3s linear;
+  }
+
+  &--show &__content {
+    left: unset;
+    right: 0;
+    transform: translateX(100%);
+    box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+    
+  }
+
+  &--visible &__content {
+    transform: translateX(0);
+    transition: transform .3s linear;
+    
+  }
+
+  &__close {
+    margin-left: 16px;
+    margin-bottom: 32px;
+
+    @media (min-width: $screen-md) {
+      position: absolute;
+      left: -80px;
+      top: 32px;
+    }
+  }
+}

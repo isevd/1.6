@@ -1,0 +1,36 @@
+.section-repair {
+    background-color: $bg-color;
+
+    @media (min-width: $screen-md) {
+        padding-bottom: 32px;
+    }
+
+    @media (min-width: $screen-xl) {
+        padding-bottom: 48px;
+    }
+
+    &__swiper {
+        padding: 16px;
+
+        @media (min-width: $screen-md) {
+            padding: 24px;
+        }
+
+        @media (min-width: $screen-xl) {
+            padding: 24px 32px;
+        }
+    }
+
+    &__show-more {
+        display: none;
+
+        @media (min-width: $screen-md) {
+            display: flex;
+            margin-left: 24px;
+        }
+
+        @media (min-width: $screen-xl) {
+            margin-left: 32px;
+        }
+    }
+}

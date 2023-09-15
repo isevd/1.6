@@ -1,0 +1,30 @@
+.main-title {
+    font-family: "TT Lakes", sans-serif;
+    display: flex;
+    align-items:center;
+    margin: 0;
+    letter-spacing: -0.6px;
+
+    &::before {
+        content: "";
+        display: inline-block;
+        width: 4px;
+        height: 40px;
+        margin-right: 12px ;
+        background-color: $line-color;
+        border-radius: 0 4px 4px 0;
+
+        @media (min-width: $screen-md) {
+            margin-right: 20px;
+        }
+        @media (min-width: $screen-xl) {
+            margin-right: 32px;
+        }
+    }
+
+    &--size {
+        &--sm {
+            font-size: 28px;
+        }
+    }
+}

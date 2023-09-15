@@ -1,0 +1,22 @@
+.list-container {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @media (min-width: $screen-md) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 16px;
+        column-gap: 24px;
+        overflow: hidden;
+        height: auto;
+        max-height: 160px;
+        transition: all .5s ease-out;
+    }
+
+    @media (min-width:1120px) {
+         display: grid;
+         grid-template-columns: 1fr 1fr 1fr 1fr;
+         column-gap: 30px;
+    }
+}

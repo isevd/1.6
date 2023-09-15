@@ -1,0 +1,27 @@
+.address {
+    display: flex;
+    flex-direction: column;
+    font-style: normal;
+
+    &__mail {
+        text-decoration: none;
+        font-weight: 500;
+        font-size: $font-size-med;
+        line-height: 24px;
+        letter-spacing: -0.6px;
+        margin-top: 8px;
+        margin-right: auto;
+        color: $text-color-primary;
+    }
+
+    &__tel {
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -0.6px;
+        margin-right: auto;
+        margin-top: 12px;
+        color: $text-color-primary;
+    }
+}

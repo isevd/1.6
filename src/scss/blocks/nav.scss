@@ -1,0 +1,41 @@
+.nav {
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__link {
+        &,
+        &:active {
+            color: $text-color-primary;
+            display: block;
+            text-decoration: none;
+            font-size: $font-size-med;
+            letter-spacing: -0.2px;
+            font-weight: 500;
+            padding: 15px;
+            transition: all .5s ease;
+            @media (min-width: 360px) {
+                padding-left: 24px;
+            }
+        }
+        
+        &:hover,
+        &:focus {
+            outline: none;
+            color: $color-nav-text;
+        }
+
+        &:focus::before {
+            position: absolute;
+            left: 0;
+            content: "";
+            width: 4px;
+            height: 32px;
+            border-radius: 2px;
+            background: $line-color;
+        }
+    }
+}

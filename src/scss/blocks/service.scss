@@ -1,0 +1,155 @@
+.service {
+    box-sizing: border-box;
+    font-size: $font-size-min;
+    line-height: 18px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: .2px;
+    &__header {
+        display: none;
+
+        @media (min-width: $screen-md) {
+            display: flex;
+            color: $text-color-secondary;
+            justify-content: space-between;
+            padding: 0 16px;
+        }
+
+        @media (min-width: $screen-xl) {
+            padding: 0 24px;
+        }
+    }
+
+    &__body {
+        padding: 16px 0;
+        margin-bottom: -16px;
+
+        @media (min-width: $screen-md) {
+            padding: 0 16px;
+            background: $white;
+            border-radius: 6px;
+            display: block;
+            box-sizing: border-box;
+            margin-bottom: 0;
+        }
+
+        @media (min-width: $screen-xl) {
+            padding: 0 24px;
+        }
+    }
+
+    &__row {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        background: $white;
+        border-radius: 6px;
+        padding: 16px;
+        width: 260px;
+        height: 200px;
+        box-sizing: border-box;
+
+        @media (min-width: $screen-md) {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid $card-border-color;
+            border-radius: 0px;
+            padding: 0;
+            box-sizing: border-box;
+            width: 100%;
+            height: auto;
+        }
+
+        &:last-child {
+            @media (min-width: $screen-md) {
+                border: none;
+            }
+        }
+
+    }
+
+    &__name {
+        margin-bottom: 1rem;
+
+        &::before {
+            content: "Ремонтные услуги"
+        }
+
+        @media (min-width: $screen-md) {
+            width: 50%;
+            padding: 16px 0;
+            margin: 0;
+        }
+
+        @media (min-width: $screen-xl) {
+            width: 40%;
+        }
+    }
+
+    &__price {
+        margin-bottom: 16px;
+
+        &::before {
+            content: "Цена"
+        }
+
+        @media (min-width: $screen-md) {
+            width: 10%;
+            padding: 16px 0;
+            margin: 0;
+        }
+
+        @media (min-width: $screen-xl) {
+            width: 15%;
+        }
+    }
+
+    &__time {
+        ::before {
+            content: "Срок"
+        }
+
+        @media (min-width: $screen-md) {
+            width: 12%;
+            padding: 16px 0;
+        }
+
+        @media (min-width: $screen-xl) {
+            width: 15%;
+        }
+    }
+
+    &__name::before,
+    &__price::before,
+    &__time::before {
+        display: block;
+        margin: 0;
+        padding: 0;
+        color: $text-color-secondary;
+
+        @media (min-width: $screen-md) {
+            display: none;
+        }
+    }
+
+    &__button {
+        position: absolute;
+        display: flex;
+        justify-content: flex-end;
+        bottom: 16px;
+        right: 16px;
+        @media (min-width: $screen-md) {
+            position: static;
+            width: 15%;
+            padding: 16px 0;
+        }
+
+        @media (min-width: $screen-xl) {
+            width: 10%;
+        }
+    }
+}

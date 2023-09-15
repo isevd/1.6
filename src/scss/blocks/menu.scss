@@ -1,0 +1,107 @@
+.menu {
+    width: 100%;
+    max-width: 370px;
+    height: 100%;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 
+    -2px 0px 4px rgba(69, 79, 126, 0.02), 
+    16px 0px 52px rgba(14, 24, 80, 0.2);
+    transition: all .4s ease-out;
+    padding-bottom: 16px;
+    box-sizing: border-box;
+
+    @media (max-height: 740px) {
+            padding-top: 16px;
+            overflow: scroll;
+            height: 100vh;
+    }
+
+    @media (min-width: $screen-xl) {
+            position: fixed;
+            top: 0px;
+            left: 50%;
+            opacity: 1;
+            transform: translateX(-720px);
+            width: 320px;
+            z-index: 100;
+            visibility: visible;
+            box-shadow:  
+            -16px 0px 52px rgba(14, 24, 80, 0.1);
+            transition: all .4s ease-out;
+    }
+
+    & [data-menu="close"]{
+        @media (min-width: $screen-xl){
+            display: none;
+        }
+    }
+
+    &__header {
+        display: flex;
+        height: 90px;
+        align-items: center;
+        margin: 0 16px;
+
+        @media (min-width: 360px) {
+            margin-left: 24px;
+        }
+    }
+
+    &__logo {
+        margin-left: 16px;
+        margin-right: auto;
+
+        @media (min-width: $screen-xl) {
+                margin-left: 0;
+        }
+    }
+
+    &__nav {
+        margin: 16px 0 30px;
+    }
+
+    &__icons {
+        display: flex;
+        margin: 16px 8px 0;
+
+        @media (min-width: 360px) {
+            margin-left: 16px;
+        }
+    }
+
+    &__address {
+        margin-left: 16px;
+
+        @media (min-width: 360px) {
+            margin-left: 24px;
+        }
+    }
+    &__address-link--color{
+        transition: color .4s ease-out;
+        &:hover {
+            color: $gray;
+        }
+        
+    }
+
+    &__lang {
+        margin: 16px;
+
+        @media (min-width: 360px) {
+            margin-left: 24px;
+        }
+        
+        @media (min-width:$screen-md) {
+            margin-top: 40px;
+        }
+    }
+    &__lang-link--animation {
+        transition: color .4s ease;
+        &:hover,
+        &:focus {
+            color: $color-nav-text;
+        }
+    }
+}

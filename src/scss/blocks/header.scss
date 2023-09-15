@@ -1,0 +1,99 @@
+.header {
+    height: 90px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    position: relative;
+
+    @media (min-width: $screen-xl) {
+        height: 0;
+        padding: 0;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        margin: 8px;
+        margin-right: auto;
+
+        @media (min-width: $screen-xl) {
+            display: none;
+        }
+
+        &::before {
+            @media (min-width: 600px) {
+                content: "";
+                display: block;
+                width: 2px;
+                height: 32px;
+                background-color: $divider-color;
+                margin: auto 24px auto 16px;
+            }
+        }
+    }
+
+    &__repair {
+        display: flex;
+        align-items: center;
+
+        @media (min-width: $screen-xl) {
+            position: absolute;
+            right: 2rem;
+            top: 2rem;
+        }
+
+        &:before {
+            content: "";
+            width: 2px;
+            height: 32px;
+            background-color: $divider-color;
+            margin: auto .5rem;
+
+            @media (min-width: 350px) {
+                display: none;
+            }
+            @media (min-width: 600px) {
+                margin: auto .75rem;
+                display: block;
+            }
+            @media (min-width: $screen-xl) {
+                display: none;
+            }
+        }
+    }
+
+    &__repair .button__text {
+        display: none;
+
+        @media (min-width: 900px) {
+            display: block;
+        }
+
+    }
+
+    & > &__button {
+        @media (min-width: $screen-xl) {
+            display: none;
+        }
+    }
+
+    &__button {
+        margin: .5rem;
+    }
+
+    &__icons {
+        display: none;
+
+        @media (min-width: 600px) {
+            display: flex;
+        }
+        @media (min-width: $screen-xl) {
+            display: none;
+        }
+    }
+
+}

@@ -1,0 +1,23 @@
+.swiper-pagination {
+    display: block;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 1.5rem;
+
+    @media (min-width: $screen-md) {
+            display: none;
+    }
+
+    &-bullet {
+        width: .75rem;
+        height: .75rem;
+        background-color: $gray;
+        &-active {
+            background-color: #B5B6BC;
+        }
+    } 
+}
+
+
